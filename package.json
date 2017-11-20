@@ -1,6 +1,6 @@
 {
   "name": "taskr-precache",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "Generate a service worker to cache resources and make them available offline.",
   "repository": "https://github.com/marcusasplund/taskr-precache",
   "main": "index.js",
