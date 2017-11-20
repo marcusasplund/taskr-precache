@@ -1,4 +1,6 @@
 # taskr-precache [![][travis-badge]][travis-link]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/marcusasplund/taskr-precache.svg)](https://greenkeeper.io/)
 > _[Precache](https://github.com/GoogleChrome/sw-precache)_ plugin for _[Taskr](https://github.com/lukeed/taskr)_.
 
 > Generate a service worker to cache resources and make them available offline.
