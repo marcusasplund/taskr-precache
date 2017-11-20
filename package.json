@@ -1,0 +1,42 @@
+{
+  "name": "taskr-precache",
+  "version": "0.0.0",
+  "description": "Precache plugin for taskr",
+  "repository": "https://github.com/marcusasplund/taskr-precache",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "fly",
+    "fly-plugin",
+    "precache"
+  ],
+  "scripts": {
+    "test": "xo && tape test/*.js | tap-spec"
+  },
+  "author": {
+    "name": "Marcus Asplund",
+    "email": "rootfood@gmail.com",
+    "url": "https://pap.as"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2",
+    "fly": "^2.0.5",
+    "fly-clear": "^1.0.1",
+    "xo": "*"
+  },
+  "engines": {
+    "node": ">= 4.6"
+  },
+  "xo": {
+    "semicolon": false,
+    "rules": {
+      "generator-star-spacing": 0,
+      "capitalized-comments": 0,
+      "require-yield": 0
+    }
+  }
+}
