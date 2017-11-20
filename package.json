@@ -1,17 +1,22 @@
 {
   "name": "taskr-precache",
-  "version": "0.0.0",
-  "description": "Precache plugin for taskr",
+  "version": "1.0.0",
+  "description": "Generate a service worker to cache resources and make them available offline.",
   "repository": "https://github.com/marcusasplund/taskr-precache",
   "main": "index.js",
   "license": "MIT",
   "files": [
-    "index.js"
+    "lib/index.js"
   ],
   "keywords": [
-    "fly",
-    "fly-plugin",
-    "precache"
+    "taskr",
+    "taskr-plugin",
+    "precache",
+    "service",
+    "worker",
+    "offline",
+    "sw",
+    "cache"
   ],
   "scripts": {
     "test": "xo && tape test/*.js | tap-spec"
@@ -22,10 +27,10 @@
     "url": "https://pap.as"
   },
   "devDependencies": {
+    "@taskr/clear": "^1.1.0",
     "tap-spec": "^4.1.1",
-    "tape": "^4.2.2",
-    "fly": "^2.0.5",
-    "fly-clear": "^1.0.1",
+    "tape": "^4.8.0",
+    "taskr": "^1.1.0",
     "xo": "*"
   },
   "engines": {
@@ -38,5 +43,9 @@
       "capitalized-comments": 0,
       "require-yield": 0
     }
+  },
+  "dependencies": {
+    "sw-precache": "^5.2.0",
+    "sw-toolbox": "^3.6.0"
   }
 }

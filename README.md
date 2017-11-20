@@ -1,52 +1,38 @@
-<div align="center">
-  <a href="http://github.com/flyjs/fly">
-    <img width=200px  src="https://cloud.githubusercontent.com/assets/8317250/8733685/0be81080-2c40-11e5-98d2-c634f076ccd7.png">
-  </a>
-</div>
+# taskr-precache [![][travis-badge]][travis-link]
+> _[Precache](https://github.com/GoogleChrome/sw-precache)_ plugin for _[Taskr](https://github.com/lukeed/taskr)_.
 
-# taskr-precache
-
-> Precache plugin for _[Fly](https://github.com/flyjs/fly)_.
-
-[![npm package][npm-ver-link]][releases]
-[![][dl-badge]][npm-pkg-link]
-[![][travis-badge]][travis-link]
+> Generate a service worker to cache resources and make them available offline.
 
 ## Install
 
-```sh
+````bash
 npm install --save-dev taskr-precache
-```
+````
+or with yarn
 
-## Usage
-
-
-```js
-exports.default = function * (fly) {
-  yield fly.source('src/*.js').precache().target('dist')
-}
-```
+````bash
+yarn add taskr-precache --dev
+````
 
 ## API
 
-### .precache(input, options)
+### .precache(options)
 
-> Check out the [documentation](PLUGIN_DOCUMENTATION) to see the available options.
+A full list of `sw-precache` options can be [found here](https://github.com/GoogleChrome/sw-precache#options-parameter).
 
-#### input
+## Usage
 
-Type: `string`<br>
-Default: 'foobar'
+Cache assets within the `dist` directory. This will create a `dist/sw` directory that contains two dependencies for the `dist/service-worker.js`.
 
-This is a description.
-
-#### options.foo
-
-Type: `boolean`<br>
-Default: `false`
-
-This is a description.
-
+```js
+exports.cache = function * (task) {
+  yield task.source('dist/**/*.{js,html,css,png,jpg,gif}')
+    .precache({
+      cacheId: 'my-project-name'
+    })
+    .target('dist')
+}
+```
 
 ## License
 
